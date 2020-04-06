@@ -1,51 +1,69 @@
-# Git_Command
-Catatan personal dalam penggunaan git sehari hari
-TODO :
-- Rapihin markdown
-
-// Inisialisasi
+### Initialization
+```git
 git init
+```
 
-// Nambah url
+### Add url
+```git
 git remote add origin (copas url git)
-git remote -v
+git remote -v // check available remote url
+```
 
-// Add file
-git add .
-git commit -m "nama commit"
+### Add file
+```git
+git add filename // . or -A means all
+git commit -m "commit name" 
+```
 
-// Upload lokal -> remote
+### Upload local -> remote
+```git
 git push -u origin master
+```
 
-// ngambil revisi
-git fetch -u origin master (ketahan)
-git pull -u origin master (langsung)
+### Pull revision
+```git
+git fetch -u origin master (hold)
+git pull -u origin master (auto merge)
+```
 
-// pindah branch
+### Switch branch
+```git
 git checkout master
+```
 
-//gabungin remote -> lokal
+### Merge remote -> lokal
+```git
 git merge origin/master (remote -> lokal)
-
-//download 
+```
+### Download 
+```git
 git clone (url)
+```
 
-//riwayat
+### History
+```git
 git log --oneline
+```
 
-//perubahan
+### Preview changes
+```git
 git diff 
+```
 
-// Update project hasil fork
-# Tambah repositori asal, dinamain "upstream":
+### Update project hasil fork
+#### Tambah repositori asal, dinamain "upstream" :
+```git
 git remote add upstream https://github.com/whoever/whatever.git
-
-# Ngambil semua update dari repositori asal,
-# contoh upstream/master:
+```
+#### Ngambil semua update dari repositori asal, contoh upstream/master :
+```git
 git fetch upstream
-
-# pastiin lagi di branch master repositori lokal:
+```
+#### Pastiin lagi di branch master repositori lokal :
+```git
 git checkout master
-
-# Nulis ulang branch master jadi histori commit yang gk ada di upstream/master jadi ada di branch local lain :
+```
+#### Nulis ulang branch master jadi histori commit yang gk ada di upstream/master jadi ada di branch local lain :
+```git
 git rebase upstream/master
+```
